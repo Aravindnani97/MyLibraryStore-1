@@ -45,18 +45,18 @@ namespace MyLibraryStore.Controllers
             return RedirectToAction("Index", "Books");
         }
 
-        //[HttpGet]
-        //public IActionResult Edit(int id)
-        //{
-        //    var book = _bookRepos.GetBookById(id);
-        //    return View(book);
-        //}
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var book = _bookRepos.GetBookById(id);
+            return View(book);
+        }
 
         //[HttpPost]
         //public void EditBook(int id,
         //                     Book book)
         //{ 
-            
+
         //    var copy = _dbContext.Books.SingleOrDefault(x => x.Id == id);
         //    copy.BookName = book.BookName;
         //    copy.Author = book.Author;
